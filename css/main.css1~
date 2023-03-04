@@ -1,0 +1,242 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colores */
+/* Tipografia */
+/* ============ */
+h2,
+.hero-content {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mobile-menu,
+.desktop-menu {
+  display: none;
+}
+
+p {
+  font-family: "Alata", sans-serif;
+}
+
+.hero {
+  background-image: url("/images/mobile/image-hero.jpg");
+  background-size: cover;
+  min-height: 80vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  /*==== HEADER ====*/
+  /*==== TEXTO DEL HEADER ====*/
+}
+.hero .header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*==== MENU MOBILE =====*/
+  /* El .disabled de JS debe ir siempre abajo de todo para que no se superponga con otros "display" */
+}
+.hero .header .logo {
+  width: 9rem;
+}
+.hero .header .open-menu,
+.hero .header .close-menu {
+  border: 0;
+  background-color: transparent;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.hero .header .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0deg, 0%, 0%);
+  position: fixed;
+  inset: 0;
+  padding: 2rem;
+}
+.hero .header .mobile-menu .mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero .header .mobile-menu-nav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+.hero .header .mobile-menu-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero .header .mobile-menu-nav ul li a {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.8rem;
+}
+.hero .header .disabled {
+  display: none;
+}
+.hero .hero-content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* permite que se llene el espacio restante del contenedor */
+  justify-content: center;
+}
+.hero .hero-content p {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2.6rem;
+  border: 2px solid hsl(0deg, 0%, 100%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.hero .hero-content p span:nth-child(1) {
+  margin-bottom: 0, 5;
+}
+.hero .hero-content p span:nth-child(2) {
+  margin-bottom: 0, 5;
+}
+
+/*=== MAIN ===*/
+main {
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /*==== IMAGENES ====*/
+}
+main .intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .intro .intro-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .intro .intro-info p {
+  font-size: 0.75rem;
+  color: hsl(0deg, 0%, 41%);
+  line-height: 2;
+  margin: 0 30px;
+}
+main .creations {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+main .creations .creations-title {
+  text-align: center;
+}
+main .creations .creations-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  position: relative;
+  width: 100%;
+}
+main .creations .creations-grid div {
+  background-size: cover;
+  height: 8rem;
+  padding: 1rem;
+  display: flex;
+  align-items: end; /* Recordar este estilo */
+  position: relative; /* Establece una posición relativa para permitir la superposición */
+  /* Agrega un fondo negro semi-transparente encima de la imagen */
+}
+main .creations .creations-grid div h2 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  position: relative; /* Establece una posición relativa para mantener el texto en la parte superior */
+  z-index: 1; /* Establece una capa superior para el texto */
+}
+main .creations .creations-grid div::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6); /* ajusta la opacidad aquí */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply; /* Agrega esta propiedad para mantener el color del texto */
+  /* En realidad no es necesario el mix-blend-mode .. PERO la dejo para aprender */
+}
+main .creations .creations-grid div:nth-child(1) {
+  background-image: url("/images/mobile/image-deep-earth.jpg");
+}
+main .creations .creations-grid div:nth-child(2) {
+  background-image: url("/images/mobile/image-night-arcade.jpg");
+}
+main .creations .creations-grid div:nth-child(3) {
+  background-image: url("/images/mobile/image-soccer-team.jpg");
+}
+main .creations .creations-grid div:nth-child(4) {
+  background-image: url("/images/mobile/image-grid.jpg");
+}
+main .creations .creations-grid div:nth-child(5) {
+  background-image: url("/images/mobile/image-from-above.jpg");
+}
+main .creations .creations-grid div:nth-child(6) {
+  background-image: url("/images/mobile/image-pocket-borealis.jpg");
+}
+main .creations .creations-grid div:nth-child(7) {
+  background-image: url("/images/mobile/image-curiosity.jpg");
+}
+main .creations .creations-grid div:nth-child(8) {
+  background-image: url("/images/mobile/image-fisheye.jpg");
+}
+main .creations .btn {
+  border: 1px solid hsl(0deg, 0%, 0%);
+  width: max-content;
+  padding: 0.5rem 3rem;
+  text-transform: uppercase;
+  font-family: "Alata", sans-serif;
+  letter-spacing: 3px;
+  background-color: transparent;
+}
+
+.footer {
+  background-color: hsl(0deg, 0%, 0%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  padding: 2rem;
+  text-align: center;
+}
+.footer .logo-menu,
+.footer .icons-copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.footer .logo-menu .footer-menu ul,
+.footer .icons-copyright .footer-menu ul {
+  list-style-type: none;
+}
+.footer .logo-menu .footer-menu ul li a,
+.footer .icons-copyright .footer-menu ul li a {
+  font-family: "Alata", sans-serif;
+}
+
+/*# sourceMappingURL=main.css1~.map */

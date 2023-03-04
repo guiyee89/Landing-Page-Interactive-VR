@@ -1,0 +1,435 @@
+@use "./variables" as vars;
+
+.hero{
+    background-image: url("/images/mobile/image-hero.jpg");
+    background-size:cover;
+    min-height: 80vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    
+    /*==== HEADER ====*/
+    .header{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        .logo{
+            width: 9rem;
+        }
+        .open-menu,
+        .close-menu{
+            border: 0;
+            background-color: transparent;
+            color: vars.$white;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
+        /*==== MENU MOBILE =====*/
+        .mobile-menu{
+            display: flex;
+            flex-direction: column;
+            background-color: vars.$black;
+            position: fixed;
+            inset: 0;
+            padding: 2rem;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+
+            .mobile-menu-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+            }
+        }
+        .mobile-menu-nav{
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            font-family: vars.$titles;
+            text-transform: uppercase;
+            
+
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                li a{
+                    color: vars.$white;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        /* El .disabled de JS debe ir siempre abajo de todo para que no se superponga con otros "display" */
+        .disabled{
+            /* display: none; */
+            transform: translateX(0%);
+        }
+    }
+
+
+    /*==== TEXTO DEL HEADER ====*/
+    .hero-content{
+        display: flex;
+        align-items: center;
+        flex-grow: 1; /* permite que se llene el espacio restante del contenedor */
+        justify-content: center;
+
+        p{
+            color: vars.$white;
+            font-size: 2.6rem;
+            border: 2px solid vars.$white;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            font-family: inherit;
+
+            span:nth-child(1){
+                margin-bottom: 0,5;
+            }
+            span:nth-child(2){
+                margin-bottom: 0,5;
+            }
+            span:nth-child(3){
+                margin-bottom: 0,5;
+            }
+        }
+    }
+}
+/*=== MAIN ===*/
+main{
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+
+    .intro{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .intro-info{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            p{
+                font-size: 0.75rem;
+                color: vars.$dark-gray;
+                line-height: 2;
+                margin: 0 30px;
+            }
+        }
+    }
+
+    /*==== IMAGENES ====*/
+    .creations{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        .creations-title{
+            text-align: center;
+        }
+
+        .creations-grid{
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            position: relative;
+            width: 100%;
+
+            div{
+                
+                background-size: cover;
+                height: 8rem;
+                padding: 1rem;
+                display: flex;
+                align-items: end; /* Recordar este estilo */
+                position: relative; /* Establece una posición relativa para permitir la superposición */
+
+                h2{
+                    color: vars.$white;
+                    font-size: 1.4rem;
+                    line-height: 1.2;
+                    position: relative; /* Establece una posición relativa para mantener el texto en la parte superior */
+                    z-index: 1; /* Establece una capa superior para el texto */
+                    }
+
+                /* Agrega un fondo negro semi-transparente encima de la imagen */
+                &::before {
+                    content: '';
+                    background-color: rgba(0, 0, 0, 0.6); /* ajusta la opacidad aquí */
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    mix-blend-mode: multiply; /* Agrega esta propiedad para mantener el color del texto */
+                    /* En realidad no es necesario el mix-blend-mode .. PERO la dejo para aprender */
+
+                }
+                
+            }
+
+            div:nth-child(1){
+                background-image: url("/images/mobile/image-deep-earth.jpg");
+            }
+            div:nth-child(2){
+                background-image: url("/images/mobile/image-night-arcade.jpg");
+            }
+            div:nth-child(3){
+                background-image: url("/images/mobile/image-soccer-team.jpg");
+            }
+            div:nth-child(4){
+                background-image: url("/images/mobile/image-grid.jpg");
+            }
+            div:nth-child(5){
+                background-image: url("/images/mobile/image-from-above.jpg");
+            }
+            div:nth-child(6){
+                background-image: url("/images/mobile/image-pocket-borealis.jpg");
+            }
+            div:nth-child(7){
+                background-image: url("/images/mobile/image-curiosity.jpg");
+            }
+            div:nth-child(8){
+                background-image: url("/images/mobile/image-fisheye.jpg");
+            }
+
+        }
+
+        .btn{
+            border: 1px solid vars.$black;
+            width: max-content;
+            padding: .5rem 3rem;
+            text-transform: uppercase;
+            font-family: vars.$text;
+            letter-spacing: 3px;
+            background-color: transparent;
+        }
+    }
+}
+
+.footer{
+    background-color: vars.$black;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: vars.$white;
+    padding: 2rem;
+    text-align: center;
+
+    .logo-menu,
+    .icons-copyright{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        .footer-menu ul{
+            list-style-type:none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            li a{
+                font-family: vars.$titles;
+                color: vars.$white;
+                font-size: .75rem;
+                font-size: 1rem;                  
+            }
+        }
+
+        .icons{
+            display: flex;
+            gap: 1.3rem;
+            font-size: 1.4rem;
+        }
+        .copyright{
+            color: vars.$gray;
+            font-size: .75rem;
+        }
+    }   
+}
+
+@media screen and (min-width:1000px) {
+    .hero{
+        background-image: url("/images/desktop/image-hero.jpg");
+        padding: 2rem 6rem ;
+        
+        .header{
+            height: 6rem;
+
+            .logo{
+                width: 15rem;
+            }
+
+            .open-menu{
+                display: none;
+            }
+
+            .desktop-menu{
+                display: block;
+
+                ul{
+                    list-style-type: none;
+                    display: flex;
+                    gap: 2rem;
+                    font-family: vars.$text;
+
+                    li a{
+                        color: vars.$white;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .hero-content{
+            justify-content: flex-start;
+            
+            p{
+                font-size: 4rem;
+                padding: 20px 100px 20px 30px;
+            }
+        }
+    }
+    main{
+        padding: 6rem 8rem;
+
+        .intro{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            
+
+            img{
+                width: 100%;
+                grid-column: 1/6;
+                grid-row: 1/3;
+                min-width: 450px;
+
+            }
+        .intro-info{
+            grid-column: 5/9;
+            grid-row: 2/4;
+            background-color: vars.$white;
+            padding: 6rem;
+            text-align: left;
+            min-width: 560px;
+            max-height: 500px;
+            /* max-height: calc(100vh - 12rem); */ /* set a maximum height based on viewport height */
+        }
+            
+            
+
+            h2{
+                font-size: 2.8rem;
+                padding-bottom: 0;
+            }
+            p{
+                display: inline-block;
+                font-size: 1rem;
+                padding-top: 20px;
+                margin: 0;
+                span:nth-child(1){
+                    margin-bottom: 0,5;
+                }
+            }
+        }
+
+        .creations{
+            .btn-mobile{
+                display: none;
+            }
+
+            .creations-header{
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                align-items: center;
+
+                h2{
+                    font-size: 2.5rem;
+                }
+    
+                .btn-desktop{
+                    display: block;
+                }
+
+        
+            }
+    
+            .creations-grid{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem;
+
+                div{
+                    height: 30rem;
+
+                    h2{
+                        font-size: 2rem;
+                    }
+                }
+
+                div:nth-child(1){
+                    background-image: url("/images/desktop/image-deep-earth.jpg");
+                }
+                div:nth-child(2){
+                    background-image: url("/images/desktop/image-night-arcade.jpg");
+                }
+                div:nth-child(3){
+                    background-image: url("/images/desktop/image-soccer-team.jpg");
+                }
+                div:nth-child(4){
+                    background-image: url("/images/desktop/image-grid.jpg");
+                }
+                div:nth-child(5){
+                    background-image: url("/images/desktop/image-from-above.jpg");
+                }
+                div:nth-child(6){
+                    background-image: url("/images/desktop/image-pocket-borealis.jpg");
+                }
+                div:nth-child(7){
+                    background-image: url("/images/desktop/image-curiosity.jpg");
+                }
+                div:nth-child(8){
+                    background-image: url("/images/desktop/image-fisheye.jpg");
+                }
+            }
+        }
+    }
+
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3rem 8rem;
+
+        .logo-menu{
+            align-items: start;
+
+            .footer-menu ul {
+                flex-direction: row;
+            }
+
+            .icons-copyright{
+                align-items: end;
+            }
+        }
+        
+    }
+}
+
+   
