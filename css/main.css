@@ -31,7 +31,7 @@ p {
 }
 
 .hero {
-  background-image: url("/images/mobile/image-hero.jpg");
+  background-image: url("../images/mobile/image-hero.jpg");
   background-size: cover;
   min-height: 80vh;
   padding: 2rem 1rem;
@@ -65,7 +65,7 @@ p {
   position: fixed;
   inset: 0;
   padding: 2rem;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   transform: translateX(0%);
 }
 .hero .header .mobile-menu .mobile-menu-header {
@@ -189,28 +189,28 @@ main .creations .creations-grid div::before {
   /* En realidad no es necesario el mix-blend-mode .. PERO la dejo para aprender */
 }
 main .creations .creations-grid div:nth-child(1) {
-  background-image: url("/images/mobile/image-deep-earth.jpg");
+  background-image: url("../images/mobile/image-deep-earth.jpg");
 }
 main .creations .creations-grid div:nth-child(2) {
-  background-image: url("/images/mobile/image-night-arcade.jpg");
+  background-image: url("../images/mobile/image-night-arcade.jpg");
 }
 main .creations .creations-grid div:nth-child(3) {
-  background-image: url("/images/mobile/image-soccer-team.jpg");
+  background-image: url("../images/mobile/image-soccer-team.jpg");
 }
 main .creations .creations-grid div:nth-child(4) {
-  background-image: url("/images/mobile/image-grid.jpg");
+  background-image: url("../images/mobile/image-grid.jpg");
 }
 main .creations .creations-grid div:nth-child(5) {
-  background-image: url("/images/mobile/image-from-above.jpg");
+  background-image: url("../images/mobile/image-from-above.jpg");
 }
 main .creations .creations-grid div:nth-child(6) {
-  background-image: url("/images/mobile/image-pocket-borealis.jpg");
+  background-image: url("../images/mobile/image-pocket-borealis.jpg");
 }
 main .creations .creations-grid div:nth-child(7) {
-  background-image: url("/images/mobile/image-curiosity.jpg");
+  background-image: url("../images/mobile/image-curiosity.jpg");
 }
 main .creations .creations-grid div:nth-child(8) {
-  background-image: url("/images/mobile/image-fisheye.jpg");
+  background-image: url("../images/mobile/image-fisheye.jpg");
 }
 main .creations .btn {
   border: 1px solid hsl(0deg, 0%, 0%);
@@ -266,7 +266,7 @@ main .creations .btn {
 
 @media screen and (min-width: 1000px) {
   .hero {
-    background-image: url("/images/desktop/image-hero.jpg");
+    background-image: url("../images/desktop/image-hero.jpg");
     padding: 2rem 6rem;
   }
   .hero .header {
@@ -324,12 +324,13 @@ main .creations .btn {
   main .intro h2 {
     font-size: 2.8rem;
     padding-bottom: 0;
+    line-height: 1.2;
   }
   main .intro p {
     display: inline-block;
     font-size: 1rem;
     padding-top: 20px;
-    margin: 0;
+    margin: 0px 40px 0px 0px !important;
   }
   main .intro p span:nth-child(1) {
     margin-bottom: 0, 5;
@@ -361,28 +362,28 @@ main .creations .btn {
     font-size: 2rem;
   }
   main .creations .creations-grid div:nth-child(1) {
-    background-image: url("/images/desktop/image-deep-earth.jpg");
+    background-image: url("../images/desktop/image-deep-earth.jpg");
   }
   main .creations .creations-grid div:nth-child(2) {
-    background-image: url("/images/desktop/image-night-arcade.jpg");
+    background-image: url("../images/desktop/image-night-arcade.jpg");
   }
   main .creations .creations-grid div:nth-child(3) {
-    background-image: url("/images/desktop/image-soccer-team.jpg");
+    background-image: url("../images/desktop/image-soccer-team.jpg");
   }
   main .creations .creations-grid div:nth-child(4) {
-    background-image: url("/images/desktop/image-grid.jpg");
+    background-image: url("../images/desktop/image-grid.jpg");
   }
   main .creations .creations-grid div:nth-child(5) {
-    background-image: url("/images/desktop/image-from-above.jpg");
+    background-image: url("../images/desktop/image-from-above.jpg");
   }
   main .creations .creations-grid div:nth-child(6) {
-    background-image: url("/images/desktop/image-pocket-borealis.jpg");
+    background-image: url("../images/desktop/image-pocket-borealis.jpg");
   }
   main .creations .creations-grid div:nth-child(7) {
-    background-image: url("/images/desktop/image-curiosity.jpg");
+    background-image: url("../images/desktop/image-curiosity.jpg");
   }
   main .creations .creations-grid div:nth-child(8) {
-    background-image: url("/images/desktop/image-fisheye.jpg");
+    background-image: url("../images/desktop/image-fisheye.jpg");
   }
   .footer {
     flex-direction: row;
