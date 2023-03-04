@@ -37,7 +37,7 @@
             inset: 0;
             padding: 2rem;
             transition: transform 0.3s ease-in-out;
-            transform: translateX(100%);
+            transform: translateX(0%);
 
             .mobile-menu-header{
                 display: flex;
@@ -69,8 +69,8 @@
 
         /* El .disabled de JS debe ir siempre abajo de todo para que no se superponga con otros "display" */
         .disabled{
-            /* display: none; */
-            transform: translateX(0%);
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
         }
     }
 
@@ -432,4 +432,3 @@ main{
     }
 }
 
-   
