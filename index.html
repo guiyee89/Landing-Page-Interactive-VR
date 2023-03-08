@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Interactive VR</title>
 </head>
 <body>
     
     <div class="hero">
         <header class="header">
-            <img class="logo" src="./images/logo.svg" alt="Logo">
+            <img class="logo" src="/images/logo.svg" alt="Logo">
             <button class="open-menu" id="open-menu">
                 <i class="bi bi-list"></i>
             </button>
             <div class="mobile-menu disabled" id="mobile-menu">
                 <div class="mobile-menu-header">
-                    <img class="logo" src="./images/logo.svg" alt="Logo">
+                    <img class="logo" src="/images/logo.svg" alt="Logo">
                     <button class="close-menu" id="close-menu">
                         <i class="bi bi-x-lg"></i>
                     </button>
@@ -55,8 +56,8 @@
 
     <main>
         <div class="intro">
-            <img src="./images/desktop/image-interactive.jpg" alt="Person using VR">
-            <div class="intro-info">
+            <img src="./images/desktop/image-interactive.jpg" alt="Person using VR"data-aos="fade-left">
+            <div class="intro-info"data-aos="fade-right">
                 <h2>The leader<br><span>interactive VR</span></h2>
                 <p>Founded in 2019, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.</p>
             </div>
@@ -67,14 +68,14 @@
                 <button class="btn btn-desktop">See all</button>
             </div>
             <div class="creations-grid">
-                <div><h2>Deep<br>Earth</h2></div>
-                <div><h2>Night<br> Arcade</h2></div>
-                <div><h2>Soccer<br> Team VR</h2></div>
-                <div><h2>The<br> grid</h2></div>
-                <div><h2>From up<br> above VR</h2></div>
-                <div><h2>Pocket<br> borealis</h2></div>
-                <div><h2>The<br> curiosity</h2></div>
-                <div><h2>Make it<br> fisheye</h2></div>
+                <div data-aos="flip-left"><h2>Deep<br>Earth</h2></div>
+                <div  data-aos="flip-right"><h2>Night<br> Arcade</h2></div>
+                <div data-aos="flip-left"><h2>Soccer<br> Team VR</h2></div>
+                <div data-aos="flip-right"><h2>The<br> grid</h2></div>
+                <div data-aos="flip-left"><h2>From up<br> above VR</h2></div>
+                <div data-aos="flip-right"><h2>Pocket<br> borealis</h2></div>
+                <div data-aos="flip-left"><h2>The<br> curiosity</h2></div>
+                <div data-aos="flip-right"><h2>Make it<br> fisheye</h2></div>
             </div>
             <button class="btn btn-mobile">See all</button>
         </div>
@@ -103,6 +104,11 @@
             <p class="copyright">© 2023 Loopstudios. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script src="./js/main.js"></script>
 </body>
