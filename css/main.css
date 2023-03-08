@@ -265,6 +265,11 @@ main .creations .btn {
   gap: 1.3rem;
   font-size: 1.4rem;
 }
+.footer .logo-menu .icons .iconos,
+.footer .icons-copyright .icons .iconos {
+  text-decoration: none !important;
+  color: white !important;
+}
 .footer .logo-menu .copyright,
 .footer .icons-copyright .copyright {
   color: hsl(0deg, 0%, 55%);
